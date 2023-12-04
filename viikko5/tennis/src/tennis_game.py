@@ -41,7 +41,7 @@ class TennisGame:
         if player_score == 3:
             return "Forty"
 
-    def score(self):
+    def current_score(self):
         p1_score = self.assign_score(self.m_score1)
         p2_score = self.assign_score(self.m_score2)
         return f"{p1_score}-{p2_score}"
@@ -53,6 +53,6 @@ class TennisGame:
         elif self.m_score1 >= 4 or self.m_score2 >= 4:
             score = self.tiebreaker()
         else:
-            score = self.score()
+            score = self.current_score()
 
         return score
